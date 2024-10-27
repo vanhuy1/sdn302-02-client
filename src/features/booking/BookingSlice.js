@@ -5,7 +5,7 @@ export const bookRoom = createAsyncThunk(
     'booking/bookRoom',
     async (bookingData, thunkAPI) => {
         try {
-            const response = await fetch('https://sdn-hotel-fpt.onrender.com', {
+            const response = await fetch('https://sdn-hotel-api.onrender.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ export const fetchUserBookings = createAsyncThunk(
     'booking/fetchUserBookings',
     async (username, thunkAPI) => {
         try {
-            const response = await fetch(`https://sdn-hotel-fpt.onrender.com/booking/${username}`);
+            const response = await fetch(`https://sdn-hotel-api.onrender.com/booking/${username}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch bookings for user');
             }
@@ -45,7 +45,7 @@ export const fetchCurrentBookings = createAsyncThunk(
     'booking/fetchBookingInformation',
     async (_id, thunkAPI) => {
         try {
-            const response = await fetch(`https://sdn-hotel-fpt.onrender.com/booking/user/${_id}`);
+            const response = await fetch(`https://sdn-hotel-api.onrender.com/booking/user/${_id}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch bookings for user');
             }
@@ -63,7 +63,7 @@ export const fetchBookings = createAsyncThunk(
     'booking/fetchBookings',
     async (_, thunkAPI) => {
         try {
-            const response = await fetch('https://sdn-hotel-fpt.onrender.com/booking');
+            const response = await fetch('https://sdn-hotel-api.onrender.com/booking');
             if (!response.ok) {
                 throw new Error('Failed to fetch bookings');
             }
@@ -80,7 +80,7 @@ export const updateBooking = createAsyncThunk(
     'booking/updateBooking',
     async ({ id, updatedData }, thunkAPI) => {
         try {
-            const response = await fetch(`https://sdn-hotel-fpt.onrender.com/booking/${id}`, {
+            const response = await fetch(`https://sdn-hotel-api.onrender.com/booking/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ export const deleteBooking = createAsyncThunk(
     'booking/deleteBooking',
     async (bookingID, thunkAPI) => {
         try {
-            const response = await fetch(`https://sdn-hotel-fpt.onrender.com/booking/${bookingID}`, {
+            const response = await fetch(`https://sdn-hotel-api.onrender.com/booking/${bookingID}`, {
                 method: 'DELETE',
             });
             if (!response.ok) {

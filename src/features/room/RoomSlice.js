@@ -5,7 +5,7 @@ export const ViewAllRoom = createAsyncThunk(
     'room/viewAllRoom',
     async (thunkAPI) => {
         try {
-            const response = await fetch(`https://sdn-hotel-fpt.onrender.com/room`);
+            const response = await fetch(`https://sdn-hotel-api.onrender.com/room`);
             if (!response.ok) {
                 throw new Error('Failed to fetch Room!')
             }
@@ -22,7 +22,7 @@ export const ViewRoomById = createAsyncThunk(
     'room/viewRoomById',
     async ({ categoryRoomId, roomId }, thunkAPI) => {
         try {
-            const response = await fetch(`https://sdn-hotel-fpt.onrender.com/room/${roomId}`);
+            const response = await fetch(`https://sdn-hotel-api.onrender.com/room/${roomId}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch room!');
             }
@@ -39,7 +39,7 @@ export const AddRoomCategory = createAsyncThunk(
     'room/addRoomCategory',
     async ({ roomCategoryName, price, amount }, thunkAPI) => {  // Wrap parameters in an object
         try {
-            const response = await fetch('https://sdn-hotel-fpt.onrender.com/category', {
+            const response = await fetch('https://sdn-hotel-api.onrender.com/category', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ export const ViewRoomCategory = createAsyncThunk(
     'room/ViewRoomCategory',
     async (thunkAPI) => {
         try {
-            const response = await fetch(`https://sdn-hotel-fpt.onrender.com/category`);
+            const response = await fetch(`https://sdn-hotel-api.onrender.com/category`);
             if (!response.ok) {
                 throw new Error('Failed to fetch Room!')
             }
@@ -79,7 +79,7 @@ export const ViewRoomCategoryById = createAsyncThunk(
     'room/ViewRoomCategoryById',
     async (categoryRoomId, thunkAPI) => {
         try {
-            const response = await fetch(`https://sdn-hotel-fpt.onrender.com/category/${categoryRoomId}`);
+            const response = await fetch(`https://sdn-hotel-api.onrender.com/category/${categoryRoomId}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch Room!')
             }
@@ -97,7 +97,7 @@ export const UpdateRoomCategory = createAsyncThunk(
     'room/updateRoomCategory',
     async ({ categoryRoomID, roomCategoryName, price, amount }, thunkAPI) => {  // Wrap parameters in an object
         try {
-            const response = await fetch(`https://sdn-hotel-fpt.onrender.com/category/${categoryRoomID}`, {
+            const response = await fetch(`https://sdn-hotel-api.onrender.com/category/${categoryRoomID}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -121,7 +121,7 @@ export const DeleteRoomCategory = createAsyncThunk(
     async (arg, thunkAPI) => {
         try {
             const categoryRoomId = arg.categoryRoomId;
-            const response = await fetch(`https://sdn-hotel-fpt.onrender.com/category/${categoryRoomId}`, {
+            const response = await fetch(`https://sdn-hotel-api.onrender.com/category/${categoryRoomId}`, {
                 method: 'DELETE',
             });
             if (!response.ok) {
@@ -139,7 +139,7 @@ export const CreateRoom = createAsyncThunk(
     'room/createRoom',
     async ({ categoryRoomId }, thunkAPI) => {
         try {
-            const response = await fetch(`https://sdn-hotel-fpt.onrender.com/category/${categoryRoomId}/room`, {
+            const response = await fetch(`https://sdn-hotel-api.onrender.com/category/${categoryRoomId}/room`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -162,7 +162,7 @@ export const DeleteRoom = createAsyncThunk(
     'room/deleteRoom',
     async ({ roomId }, thunkAPI) => {
         try {
-            const response = await fetch(`https://sdn-hotel-fpt.onrender.com/room/${roomId}`, {
+            const response = await fetch(`https://sdn-hotel-api.onrender.com/room/${roomId}`, {
                 method: 'DELETE',
             });
             if (!response.ok) {

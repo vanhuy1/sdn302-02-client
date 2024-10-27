@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-const API_URL = "https://sdn-hotel-fpt.onrender.com";
+const API_URL = "https://sdn-hotel-api.onrender.com";
 
 const initialState = {
     departmentDetail: null,

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
-const API_URL = 'https://sdn-hotel-fpt.onrender.com';
+const API_URL = 'https://sdn-hotel-api.onrender.com';
 
 const ServiceList = () => {
     const [services, setServices] = useState([]);
