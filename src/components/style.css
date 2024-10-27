@@ -1,0 +1,22 @@
+.banner_main {
+    position: relative;
+}
+
+.form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Đặt nó lên trên các hình ảnh */
+    background: rgba(0, 0, 0, 0.5); /* Nền mờ để dễ nhìn thấy form */
+    color: white; /* Màu chữ */
+    padding: 20px; /* Padding cho form */
+}
+
+.book_room h1 {
+    color: white; /* Đặt màu cho tiêu đề */
+}

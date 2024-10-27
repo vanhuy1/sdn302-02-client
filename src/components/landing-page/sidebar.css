@@ -1,0 +1,22 @@
+.sidebar {
+    padding-top: 20px;
+  }
+  
+  .nav-item-custom {
+    font-size: 18px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .nav-item-custom:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+  }
+  
+  .nav-item-custom .me-2 {
+    font-size: 20px;
+  }
+  
+  
